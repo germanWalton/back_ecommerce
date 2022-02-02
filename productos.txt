@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Harina",
+    "price": 150,
+    "thumbnail": "http://www.jdjdjd.com",
+    "id": 1
+  },
+  {
+    "title": "Queso",
+    "price": 1530,
+    "thumbnail": "http://www.jdjdjd.com",
+    "id": 2
+  },
+  {
+    "title": "Cerveza",
+    "price": 150,
+    "thumbnail": "http://www.jdjdjd.com",
+    "id": 3
+  }
+]
