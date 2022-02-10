@@ -1,20 +1,26 @@
 [
   {
-    "title": "Harina",
-    "price": 150,
-    "thumbnail": "http://www.jdjdjd.com",
+    "title": "Chocolate",
+    "price": 3600,
+    "thumbnail": "www.cacao.com",
     "id": 1
   },
   {
-    "title": "Queso",
-    "price": 1530,
-    "thumbnail": "http://www.jdjdjd.com",
+    "title": "Café",
+    "price": 1600,
+    "thumbnail": "www.cafe.com",
     "id": 2
   },
   {
     "title": "Cerveza",
-    "price": 150,
-    "thumbnail": "http://www.jdjdjd.com",
+    "price": 300,
+    "thumbnail": "www.beer.com",
     "id": 3
+  },
+  {
+    "title": "Chocolate",
+    "price": 3600,
+    "thumbnail": "www.cacao.com",
+    "id": 4
   }
 ]

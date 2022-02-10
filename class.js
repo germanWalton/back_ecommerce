@@ -21,12 +21,28 @@ class Contenedor {
     //Recibe un id y devuelve un objeto con ese id, o null si no esta
     try {
       const products = await this.getAll();
-      const result = products.find((product) => product.id === id);
-      result === undefined ? null : result;
+      const result = products.find((product) => product.id == id);
+      return result;
+      //  result === undefined ? null : result;
     } catch (error) {
       console.log(error);
     }
   }
+
+   async updateById(id, obj) {
+     //Recibe un id y modifica el objeto con ese id
+     try {
+       const products = await this.getAll();
+       const index = products.findIndex(p => p.id == id);
+       console.log(index);
+         products[index].title = obj.title;
+         products[index].price = obj.price;
+         products[index].thumbnail = obj.thumbnail;
+         products === undefined ? null : await fs.writeFile(this.filePath, JSON.stringify(products, null, 2));
+     } catch (error) {
+       console.log(error);
+     }
+   }
 
   async getAll() {
     //Devuelve un array con los objetos presentes en el archivo
