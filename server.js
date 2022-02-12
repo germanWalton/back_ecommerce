@@ -8,6 +8,7 @@ const productsRouter = require('./routes/products');
 app.use(express.json()); //req.body
 app.use(express.urlencoded({extended:true})) //req.body
 app.use(cookieParser());
+
 app.use('/static', express.static(path.join(__dirname, 'public'))) //ruta absoluta
 app.use('/docs',express.static(path.join(__dirname,'docs'))) //ruta absoluta
 

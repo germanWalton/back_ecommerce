@@ -22,8 +22,8 @@ class Contenedor {
     try {
       const products = await this.getAll();
       const result = products.find((product) => product.id == id);
+      if (result == undefined) { return null };
       return result;
-      //  result === undefined ? null : result;
     } catch (error) {
       console.log(error);
     }
@@ -34,11 +34,10 @@ class Contenedor {
      try {
        const products = await this.getAll();
        const index = products.findIndex(p => p.id == id);
-       console.log(index);
          products[index].title = obj.title;
          products[index].price = obj.price;
          products[index].thumbnail = obj.thumbnail;
-         products === undefined ? null : await fs.writeFile(this.filePath, JSON.stringify(products, null, 2));
+         await fs.writeFile(this.filePath, JSON.stringify(products, null, 2));
      } catch (error) {
        console.log(error);
      }
@@ -60,7 +59,7 @@ class Contenedor {
     //Elimina del archivo el objeto con el id buscado
     try {
       const products = await this.getAll();
-      const result = products.filter((product) => product.id !== id);
+      const result = products.filter((product) => product.id != id);
       await fs.writeFile(this.filePath, JSON.stringify(result, null, 2));
     } catch (error) {
       console.log(error);
