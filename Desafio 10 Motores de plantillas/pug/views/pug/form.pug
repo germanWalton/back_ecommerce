@@ -1,0 +1,15 @@
+extends layout/base.pug
+block content
+      h1 Ingreso de productos
+      form(action="/productos" method="POST" class="w-50 mx-auto")   
+        div(class="mb-3 mt-5")
+          label(for="title" class="form-label") Titulo
+          input(name="title" type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp")
+        div(class="mb-3")
+          label(for="price" class="form-label") Precio
+          input(name="price" type="text" class="form-control" id="exampleInputPrice" aria-describedby="emailHelp")
+        div(class="mb-3")
+          label(for="thumbnail" class="form-label") Url Imagen
+          input(name="thumbnail" type="text" class="form-control" id="exampleInputUrl" aria-describedby="emailHelp")
+        button(type="submit" class="btn btn-dark") Enviar
+

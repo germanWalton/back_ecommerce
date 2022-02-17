@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') -%>
+<body>
+  <%- include('partials/nav') -%>
+
+<div class="container text-center">
+  <h1>Hola, bienvenido</h1>
+  <p class="mt-5">Los productos disponibles son:</p>
+  <% if(products.length > 0) { %> 
+  <% products.forEach(function(product) { %> 
+  <div class="card mx-auto" style="width: 18rem">
+   <img src= <%= product.thumbnail %> class="w-25 mx-auto mt-3 card-img-top">
+        <div class="card-body">
+          <h5 class="card-title"><%= product.title %></h5>
+          <p class="card-text">$ <%= product.price %></p>
+        </div>
+    <% })  %>
+  </div>
+  <% }else{ %> 
+    <h3 class="mt-5">Ups... no hay productos disponibles</h3>
+  <% } %> 
+
+</div>
+</body>
+</html>

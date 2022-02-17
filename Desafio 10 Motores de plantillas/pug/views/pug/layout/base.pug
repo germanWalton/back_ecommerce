@@ -7,10 +7,9 @@ html
   body
     nav
       ul(class="d-flex justify-content-center p-4")
-        a(class="text-decoration-none text-dark me-5 btn btn-dark text-white", href="/pug")
-          li(class="list-unstyled") Inicio
-        a(class="text-decoration-none text-dark btn btn-dark text-white", href="/pug/add") 
-          li(class="list-unstyled") Agregar producto
+        a(class="text-decoration-none text-dark me-5", href="/productos")
+          li(class="list-unstyled") VER PRODUCTOS
+        a(class="text-decoration-none text-dark", href="/productos/add") 
+          li(class="list-unstyled") AGREGAR PRODUCTO
     div(class="container text-center")
-      p El producto #{product} ha sido agregado con exito!!!
-
+      block content 

@@ -1,0 +1,16 @@
+extends layout/base.pug
+block content
+      h1 Hola, bienvenido
+      p(class="mt-4") Los productos disponibles son:
+      ul
+        each product in products
+          div(class="card mx-auto" style="width: 18rem;")
+            img(src=`${product.thumbnail}` class="w-25 mx-auto mt-2 card-img-top")
+            div(class="card-body")
+              h5(class="card-text")= product.title
+              p(class="card-text")= `$ ${product.price}`
+
+          
+        else
+          h1 😡
+          li(class="text-center mt-5")  No hay productos disponibles      

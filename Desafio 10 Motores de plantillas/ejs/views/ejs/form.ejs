@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') -%>
+<body>
+  <div class="container col-lg-3 p-5">
+    <h3 class="p-3 text-center">Ingreso de productos</h3>
+  <form action="/productos" method="post">
+    <div class="mb-3">
+      <label for="title" class="form-label">Titulo</label>
+      <input name="title" type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Precio</label>
+      <input name="price" type="text" class="form-control" id="exampleInputPrice">
+    </div>
+    <div class="mb-3">
+      <label for="thumbnail" class="form-label">Url Imagen</label>
+      <input name="thumbnail" type="text" class="form-control" id="exampleInputUrl">
+    </div>
+    
+    <button type="submit" class="btn btn-dark">Cargar</button>
+    <button type="button" class="btn btn-dark"><a class="text-white text-decoration-none" href="/productos">Ver productos</a></button>
+
+  </form>
+</div>
+</body>
+</html>
