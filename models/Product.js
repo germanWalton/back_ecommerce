@@ -1,8 +1,10 @@
 const fs = require("fs").promises;
+const path = require('path');
 
-class Contenedor {
-  constructor(filePath) {
-    this.filePath = filePath;
+
+class Product {
+  constructor() {
+    this.filePath = path.join(__dirname, '../database/products.json');
   }
 
   async save(obj) {
@@ -76,4 +78,4 @@ class Contenedor {
   }
 }
 
-module.exports = Contenedor;
+module.exports = Product;

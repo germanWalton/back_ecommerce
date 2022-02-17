@@ -1,9 +1,27 @@
 const express = require("express");
 const { Router } = express;
 const router = Router();
-const Contenedor = require("../class");
-const nuevoProducto = new Contenedor("./productos.txt");
+const Product = require("../models/Product");
+const productModel = new Product();
 
+
+
+
+router.get('/', async (req, res) => {
+  const products = await productModel.getAll()
+  res.render('index', { products })
+})
+
+router.get('/add', async (req, res) => res.render('form'))
+
+router.post('/add', async (req, res) => {
+  await productModel.save(req.body)
+  res.redirect(`/pug/result?product=${req.body.title}`)
+})
+
+router.get('/result', (req,res)=> res.render('result', {product:req.query.product}))
+
+/*
 //GET /productos
 
 router.get("/", async (req, res) => {
@@ -38,7 +56,7 @@ router.post("/", async (req, res) => {
   const { title, price, thumbnail } = await req.body;
   nuevoProducto.save({ title, price, thumbnail });
   // res.sendStatus(201);
-  res.redirect("/static");
+  res.redirect("/");
   
 });
 
@@ -73,5 +91,5 @@ router.delete("/:id", async (req, res) => {
   nuevoProducto.deleteById(id);
   res.sendStatus(200);
 });
-
+*/
 module.exports = router;
