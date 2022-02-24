@@ -1,66 +1,79 @@
-const socket = io()
-let user = document.getElementById('user')
-let input = document.getElementById('message')
-let submit = document.getElementById('submit')
+const socket = io();
+console.log(socket);
 
-//-----------Socket Events------------//
-submit.addEventListener('click', () => {
-    let date = new Date()
-    if(input.value && user.value){
-        socket.emit('message', 
-            {
-            user:user.value, 
-            message:message.value, 
-            date:date.toLocaleString()
-            }
-    )}else{
-        console.log('message not send')
-    }
-})
-
-socket.on('messagelog', data => {
-    let divLog = document.getElementById('log')
-    let allMessages = data.map(message => {
-        return  `<div class="d-flex justify-content-center">
-                    <p class="user me-1">${message.user}</p>
-                    <p class="date me-2">[${message.date}]:</p>
-                    <p class="message">${message.message}</p>
-                </div>`
-    }).join('')
-    divLog.innerHTML = allMessages
-})
-
-socket.on('deliverProducts', data => {
-    fetch('templates/productsTable.handlebars')
-    .then(string => string.text())
-    .then(template => {
-        const processedTemplate = Handlebars.compile(template)
-        const templateObj = {
-            products:data
-        }
-        const html = processedTemplate(templateObj)
-        let div = document.getElementById('productTable')
-        div.innerHTML = html
+socket.on("Products", (data) => {
+  const productsList = document.querySelector("#productsList");
+  let html;
+  fetch("/static/templates/products.hbs")
+    .then((resp) => resp.text())
+    .then((templateHbs) => {
+      //compila la plantilla
+      const template = Handlebars.compile(templateHbs);
+      //html con la plantilla compilada
+      html = template({ data });
     })
-})
-
-//-----------Fin Socket Events-----------//
-
-const sendForm = (event) => {
-    event.preventDefault()
-    let form = document.querySelector('#productForm')
-    let data = new FormData(form)
-
-    fetch('/api/products', {
-        method: 'POST',
-        body: data,
-    }).then(result => {
-        return result.json()
-    }).then(json => {
-        console.log(json)
-        return {status:"success", message:"Producto Agregado"}
+    .finally(() => {
+      productsList.innerHTML = html;
     })
-    .then(result => location.href='/')
-}
+    .catch((e) => {
+      console.log(e);
+    });
+});
 
-document.addEventListener('submit', sendForm);
+socket.on("Messages", (data) => {
+  const chat = document.querySelector("#chat");
+  let html;
+  fetch("/static/templates/chats.hbs")
+    .then((resp) => resp.text())
+    .then((templateHbs) => {
+      //compila la plantilla
+      const template = Handlebars.compile(templateHbs);
+      //html con la plantilla compilada
+      html = template({ data });
+    })
+    .finally(() => {
+      chat.innerHTML = html;
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+});
+
+const sendProduct = document.querySelector("#sendProduct");
+sendProduct.addEventListener("click", (e) => {
+  e.preventDefault();
+  const title = document.querySelector("#title").value;
+  const price = document.querySelector("#price").value;
+  const thumbnail = document.querySelector("#thumbnail").value;
+
+  const product = {
+    title: title,
+    price: price,
+    thumbnail: thumbnail,
+  };
+  if (title && price) {
+    socket.emit("save", product);
+    document.querySelector("#title").value = "";
+    document.querySelector("#price").value = "";
+    document.querySelector("#thumbnail").value = "";
+  }
+});
+
+
+const sendMessage = document.querySelector("#sendMessage");
+sendMessage.addEventListener("click", (e) => {
+  e.preventDefault();
+  const email = document.querySelector("#email").value;
+  const message = document.querySelector("#message").value;
+
+  const msg = {
+    email: email,
+    message: message
+    };
+
+    if (email && message) {
+    socket.emit("Msg", msg);
+    document.querySelector("#email").value = "";
+    document.querySelector("#message").value = "";
+  }
+});

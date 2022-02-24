@@ -11,12 +11,20 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+      integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <title>Productos</title>
   </head>
   <body>
-    <div class="container col-lg-3 p-5">
+    <div class="container w-25 p-5">
       <h3 class="p-3 text-center">Ingreso de productos</h3>
-      <form action="/productos" method="post">
+      <form>
         <div class="mb-3">
           <label for="title" class="form-label">Titulo</label>
           <input
@@ -40,21 +48,49 @@
             id="thumbnail"
           />
         </div>
-        <button type="submit" class="btn btn-dark" id="send">Cargar</button>
+        <button type="submit" class="btn btn-dark" id="sendProduct">
+          Cargar producto
+        </button>
       </form>
     </div>
 
-    <div class="container">
-      <ul id="products"></ul>
+    <div class="container mt-5 mb-5">
+      <ul class="d-flex" id="productsList"></ul>
     </div>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
-      integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="../public/js/main.js"></script>
+    <div class="container w-25">
+      <h3 class="text-center">Chat</h3>
+      <div class="border border secondary mb-5" id="chat"></div>
+      <form class="mb-5">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="Ingresa tu email"
+            
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Mensaje</label
+          >
+          <textarea
+            class="form-control"
+            id="message"
+            rows="3"
+            placeholder="Ingresa tu mensaje"
+            
+          ></textarea>
+        </div>
+        <button type="submit" id="sendMessage" class="btn btn-dark">
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
+
+    <script src="/static/js/client.js"></script>
   </body>
 </html>

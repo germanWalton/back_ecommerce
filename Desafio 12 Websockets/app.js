@@ -13,6 +13,8 @@ const { Server } = require("socket.io");
 const server = http.createServer(app);
 const io = new Server(server);
 
+
+
 app.use("/static", express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) =>
@@ -21,14 +23,14 @@ app.get("/", (req, res) =>
 
 // socket
 
-io.on("connection", async (socket) => {
+io.on('connection', async (socket) => {
   // cuando una nueva conexión llega al server
   console.log(`an user connected ${socket.id}`);
 
   // envío de productos
   socket.emit("Products", await products.getAll());
 
-  socket.on("Product", async (product) => {
+  socket.on("save", async (product) => {
     // guardo el producto
     await products.save(product);
     // renderizo los productos
