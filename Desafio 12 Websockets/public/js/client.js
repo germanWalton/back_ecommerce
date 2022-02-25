@@ -3,17 +3,17 @@ console.log(socket);
 
 socket.on("Products", (data) => {
   const productsList = document.querySelector("#productsList");
-  let html;
+  let templateHandlebars;
   fetch("/static/templates/products.hbs")
     .then((resp) => resp.text())
     .then((templateHbs) => {
       //compila la plantilla
       const template = Handlebars.compile(templateHbs);
       //html con la plantilla compilada
-      html = template({ data });
+      templateHandlebars = template({ data });
     })
     .finally(() => {
-      productsList.innerHTML = html;
+      productsList.innerHTML = templateHandlebars;
     })
     .catch((e) => {
       console.log(e);
@@ -22,17 +22,17 @@ socket.on("Products", (data) => {
 
 socket.on("Messages", (data) => {
   const chat = document.querySelector("#chat");
-  let html;
+  let templateHandlebars;
   fetch("/static/templates/chats.hbs")
     .then((resp) => resp.text())
     .then((templateHbs) => {
       //compila la plantilla
       const template = Handlebars.compile(templateHbs);
       //html con la plantilla compilada
-      html = template({ data });
+      templateHandlebars = template({ data });
     })
     .finally(() => {
-      chat.innerHTML = html;
+      chat.innerHTML = templateHandlebars;
     })
     .catch((e) => {
       console.log(e);
@@ -59,19 +59,30 @@ sendProduct.addEventListener("click", (e) => {
   }
 });
 
-
 const sendMessage = document.querySelector("#sendMessage");
 sendMessage.addEventListener("click", (e) => {
   e.preventDefault();
   const email = document.querySelector("#email").value;
   const message = document.querySelector("#message").value;
 
+  const emailValidator = (email) => {
+    if (
+      /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i.test(
+        email
+      )
+    ) {
+      return email;
+    } else {
+      return null;
+    }
+  };
+
   const msg = {
     email: email,
-    message: message
-    };
+    message: message,
+  };
 
-    if (email && message) {
+  if (emailValidator(email)!=null && message.length >= 3) {
     socket.emit("Msg", msg);
     document.querySelector("#email").value = "";
     document.querySelector("#message").value = "";
