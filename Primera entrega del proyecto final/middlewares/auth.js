@@ -1,3 +1,4 @@
+const path = require('path')
 
 const auth = (value, pathName) => {
   const isAdmin = value;
@@ -6,7 +7,7 @@ const auth = (value, pathName) => {
       next();
     }
     else {
-      res.status(401).send({error:401, description: "unauthorized route"})
+      res.status(401).send({Error:401, Description:` http://localhost:8080/api/${pathName}${req.path}`, Method:`${req.method} UNAUTHORIZED` })
 }
   }
 }
