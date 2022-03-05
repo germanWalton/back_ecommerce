@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Licor de avellanas",
+    "price": 2900,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_623390-MLA32007923395_082019-O.webp"
+    
+  },
+  {
+    "name": "Cerveza",
+    "price": 900,
+    "thumbnail": "https://www.espaciovino.com.ar/media/default/0001/61/thumb_60572_default_big.jpeg"
+  },
+  {
+    "name": "Licor almendras",
+    "price": 3500,
+    "thumbnail": "https://http2.mlstatic.com/D_871268-MLA43703008091_102020-O.jpg"
+  },
+  {
+    "name": "Chocolate",
+    "price": 1200,
+    "thumbnail": ""
+  },
+  {
+    "name": "Café",
+    "price": 1300,
+    "thumbnail": "https://d3ugyf2ht6aenh.cloudfront.net/stores/102/583/products/cafe-molido-italiano-illy-arabica-tienda-pepino-espresso-11-5e67c6e361b49a0fef15759294992299-1024-1024.jpg"
+  },
+  {
+    "name": "whisky",
+    "price": "3425423",
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_693047-MLA44850209416_022021-O.webp"
+  }
+]
