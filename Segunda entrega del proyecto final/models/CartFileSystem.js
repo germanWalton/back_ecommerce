@@ -1,9 +1,9 @@
 const fs = require("fs").promises;
 const moment = require("moment");
-const Container = require("../models/Container");
-const productsList = new Container("./database/products.json");
+const Product = require("./ProductFileSystem");
+const productsList = new Product("./database/products.json");
 
-class CartContainer {
+class Cart {
   constructor(filePath) {
     this.filePath = filePath;
   }
@@ -101,4 +101,4 @@ class CartContainer {
   }
 }
 
-module.exports = CartContainer;
+module.exports = Cart;

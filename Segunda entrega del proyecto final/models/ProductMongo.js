@@ -1,5 +1,3 @@
-// password ETnQpVuPdc4trpWz
-// username germanWalton
 const mongoose = require("mongoose");
 const moment = require("moment");
 
@@ -18,14 +16,12 @@ class Product {
       },
     });
 
-    //representación en JS de nuestra colección en mongo
     this.model = mongoose.model("products", schema);
   }
 
   async create(obj) {
     const product = await this.model.create(obj);
-    console.log(JSON.stringify(product, null, 2));
-    return product;
+    return product._id;
   }
 
   async getAll(orderBy = "", search = "") {
@@ -55,6 +51,12 @@ class Product {
   async getById(id) {
     const product = await this.model.find({ _id: id });
     return product;
+  }
+
+  async getByCode(code) {
+    const product = await this.model.find({ code: code });
+    return product;
+    
   }
 
   async update(id, obj) {

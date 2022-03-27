@@ -16,8 +16,8 @@ class Cart {
     this.model = mongoose.model("carts", schema);
   }
 
-  async create() {
-    const cart = await this.model.create({});
+  async create(product={}) {
+    const cart = await this.model.create(product);
     return cart;
   }
 
@@ -35,15 +35,17 @@ class Cart {
 
 
   async deleteById(id) {
-  await this.model.deleteOne({ _id: id })
-    
+   await this.model.findByIdAndDelete(id) 
    }
   
-  async deleteCartProductById(cartId, prodId) {
-    await this.model.updateMany({ _id: cartId }, { $pull: { products: { name:"Frangelicooo" } } })
-    const carrito = await this.model.findById(cartId)
-    // carrito.products.remove({ _id: "6239bb88ff26a1b41b28a0ab" })
-    console.log(carrito)
+  
+  async deleteCartProductById(cartId, cod_prod) {
+    const product = await ProductMongo.getByCode(cod_prod)
+    if(product[0]==undefined){throw new Error('Product not found')}
+    await this.model.updateMany({ _id: cartId }, { $pull: { products: { code: cod_prod } } }) 
+    
+    
+   
 
   }
 

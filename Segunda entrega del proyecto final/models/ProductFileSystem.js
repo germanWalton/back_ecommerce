@@ -1,7 +1,7 @@
 const fs = require("fs").promises;
 const moment = require("moment");
 
-class Container {
+class Product {
   constructor(filePath) {
     this.filePath = filePath;
   }
@@ -93,4 +93,4 @@ class Container {
   }
 }
 
-module.exports = Container;
+module.exports = Product;

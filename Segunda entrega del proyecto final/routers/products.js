@@ -1,27 +1,27 @@
 const express = require("express");
 const { Router } = express;
 const router = Router();
-const productsController = require("../controllers/productsController");
+const controller = require("../controllers/products");
 const auth = require("../middlewares/auth");
 
 //GET /api/productos
 
-router.get("/", productsController.getAllProducts);
+router.get("/", controller.getAllProducts);
 
 //GET /api/productos/id
 
-router.get("/:id", productsController.getProductById);
+router.get("/:id", controller.getProductById);
 
 //POST /api/productos
 
-router.post("/", auth(true, "productos"), productsController.saveProduct);
+router.post("/", auth(true, "productos"), controller.saveProduct);
 
 //PUT api/productos/id
 
 router.put(
   "/:id",
   auth(true, "productos"),
-  productsController.updateProductById
+  controller.updateProductById
 );
 
 //DELETE /productos/id
@@ -29,7 +29,7 @@ router.put(
 router.delete(
   "/:id",
   auth(true, "productos"),
-  productsController.deleteProductById
+  controller.deleteProductById
 );
 
 module.exports = router;

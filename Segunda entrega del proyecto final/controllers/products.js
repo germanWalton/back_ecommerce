@@ -1,12 +1,16 @@
-const productModel = require('../models/ProductMongo')
+const productMongo = require('../models/ProductMongo')
+const productFirebase = require('../models/ProductFirebase')
 
 
 const getAllProducts = async (req, res) => {
 
   const { orderBy, search } = req.query;
   try {
-    const products = await productModel.getAll(orderBy, search);
-    res.send(products);
+    const productsMong = await productMongo.getAll(orderBy, search);
+    // const productsFire = await productFirebase.getAll()
+     // Probar comentando un metodo y descomentando el otro 
+    res.send(productsMong);
+   
    }
   catch (e) {
     console.log(e)
@@ -17,8 +21,10 @@ const getAllProducts = async (req, res) => {
 const getProductById = async (req, res) => {
   const { id } = req.params; //parametros de URL
   try {
-    const product = await productModel.getById(id);
-    res.send(product)
+    const productMong = await productMongo.getById(id);
+    // const productFire = await productFirebase.getById(id)
+   // Probar comentando un metodo y descomentando el otro 
+    res.send(productMong)
   } catch (e) {
     console.log(e)
     res.status(404).send({ error: 'Product not found' })}
@@ -28,8 +34,10 @@ const saveProduct = async(req, res)=> {
 
   const { body } = req;
   try {
-   const product = await productModel.create(body);
-    res.status(201).send(product)
+    const productMong = await productMongo.create(body);
+    // const productFire = await productFirebase.create(body)
+     // Probar comentando un metodo y descomentando el otro 
+    res.status(201).send(productMong)
   } catch (e) {
     console.log(e)
   res.status(500).send({error: e.message})}
@@ -40,8 +48,10 @@ const updateProductById = async (req, res) => {
   const { id } = req.params; 
   const { body } = req;
   try {
-    await productModel.update(id,body);
-    res.sendStatus(201);
+   await productMongo.update(id, body);
+  //  await productFirebase.update(id, body);
+ // Probar comentando un metodo y descomentando el otro 
+  res.sendStatus(201);
   } catch (e) {
     console.log(e)
   res.status(404).send({error: 'Product not found'})}
@@ -51,7 +61,9 @@ const updateProductById = async (req, res) => {
 const deleteProductById = async (req, res) => {
   const { id } = req.params; //parametros de URL
   try {
-    await productModel.deleteById(id);
+    await productMongo.deleteById(id);
+   //  await productFirebase.deleteById(id);
+  // Probar comentando un metodo y descomentando el otro 
     res.sendStatus(202);
 
   } 
