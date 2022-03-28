@@ -30,9 +30,9 @@ class Product {
     if (orderBy) {
       const sort = {};
       sort[orderBy] = -1;
-      products = await this.model.find(find).sort(sort);
+      products = await this.model.findOne(find).sort(sort);
     } else {
-      products = await this.model.find(find);
+      products = await this.model.findOne(find);
     }
     return products.map((p) => {
       return {
@@ -49,12 +49,12 @@ class Product {
   }
 
   async getById(id) {
-    const product = await this.model.find({ _id: id });
+    const product = await this.model.findOne({ _id: id });
     return product;
   }
 
   async getByCode(code) {
-    const product = await this.model.find({ code: code });
+    const product = await this.model.findOne({ code: code });
     return product;
     
   }

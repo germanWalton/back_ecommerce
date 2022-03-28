@@ -21,10 +21,10 @@ class Cart {
     const cart = await this.db.doc(id).get();
     const cartProducts = cart.data().products;
     const dataProduct = await product.getById(prodId);
-    const newData = [{ ...cartProducts },{ ...dataProduct }];
+    
     if (cart.data() == undefined || dataProduct == undefined) { throw new Error('Cart or product not found') }
-    await this.db.doc(id).update({ products: dataProduct })
-  //  console.log(cartProducts.length)
+    cartProducts.push(dataProduct)
+    await this.db.doc(id).update({ products: cartProducts })
   }
 
 
@@ -40,7 +40,16 @@ class Cart {
     const cart = await this.db.doc(id).get();
     if(!cart.exists){throw new Error('Cart not found')}
     await this.db.doc(id).delete();
-}
+  }
+  
+  async deleteCartProductById(cartId, prodCode) {
+    const cart = await this.db.doc(cartId).get();
+    const cartProducts = cart.data().products;
+    const dataProduct = await product.getByCode(prodCode); 
+     if (cart.data() == undefined || dataProduct == undefined) { throw new Error('Cart or product not found') }
+     const filterProducts = cartProducts.filter(p => p.code !== prodCode)
+     await this.db.doc(cartId).update({ products: filterProducts })
+  }
 }
 
 module.exports = new Cart();

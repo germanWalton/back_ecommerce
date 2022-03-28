@@ -34,11 +34,9 @@ class Product {
   }
 
   async getByCode(code) {
-    const product = await this.db.doc(code).get();
-    if (!product.exists) {
-      return { Error: "Product not found" };
-    }
-    return product;
+    const products = await this.getAll();
+    const findProduct = products.find(p => p.code === code);
+    return findProduct;
   }
 
   async update(id, obj) {

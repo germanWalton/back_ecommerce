@@ -29,7 +29,7 @@ class Cart {
 
 
   async getCartProductsById(id) {
-    const cartProducts = await this.model.find({ _id: id });
+    const cartProducts = await this.model.findOne({ _id: id });
     return cartProducts[0].products;
   }
 
