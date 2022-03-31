@@ -1,6 +1,7 @@
 const knex = require("knex");
 const fs = require("fs/promises")
-const path = require("path")
+const path = require("path");
+const faker = require("faker");
 
 
 class Product {
@@ -39,16 +40,16 @@ class Product {
       throw e;
     }
   }
-  async getAll(name='') {
-   const products = await this.db("products").whereILike("name", `%${name}%`).orderBy("name")
-   return products;
+  async getAll(name = '') {
+    const products = await this.db("products").whereILike("name", `%${name}%`).orderBy("name")
+    return products;
   }
   async getById(id) {
     const product = await this.db("products").where({ id }).first();
     return product;
   }
   async update(id, product) {
-    await this.db("products").where({id}).update(product)
+    await this.db("products").where({ id }).update(product)
   }
   async create(product) {
     const result = await this.db("products").insert(product);
@@ -57,6 +58,13 @@ class Product {
   async delete(id) {
     await this.db("products").where({ id }).del();
 
+  }
+  async getFaker() {  
+    const products = []
+    for (let i = 0; i <= 4; i++) {
+     products.push({name:faker.commerce.product(),price:faker.commerce.price(),thumbnail:faker.image.image()})
+     }
+     return products
   }
 }
 

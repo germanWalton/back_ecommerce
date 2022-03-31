@@ -34,11 +34,18 @@ class Message {
     const data = new schema.Entity("data", {
       messages:[message]
     })
-    const dbMessages = await this.model.find({});
+    const dbMessages = await this.model.find({})
 
     const normalizeData = normalize({
       id: "messages",
-      messages: dbMessages,
+      messages: dbMessages.map((d) => {
+        return {
+          author: d.author,
+          text: d.text,
+          id: d._id.toString(),
+          date: d.date
+        }
+      })
     }, data) 
 
     console.log(normalizeData);

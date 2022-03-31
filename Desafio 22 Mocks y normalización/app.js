@@ -11,7 +11,6 @@
   const Product = require("./models/product");
   const Chat = require("./models/chat");
   const Message = require("./models/Message")
-  
 
 mongoose.connect(`${SCHEMA}://${USER}:${PASSWORD}@${HOSTNAME}/${DATABASE}?${OPTIONS}`).then(() => {
   console.log('connected to mongo')
@@ -34,6 +33,7 @@ mongoose.connect(`${SCHEMA}://${USER}:${PASSWORD}@${HOSTNAME}/${DATABASE}?${OPTI
   );
 
 
+
   // socket
 
   io.on("connection", async (socket) => {
@@ -41,13 +41,13 @@ mongoose.connect(`${SCHEMA}://${USER}:${PASSWORD}@${HOSTNAME}/${DATABASE}?${OPTI
     console.log(`an user connected ${socket.id}`);
 
     // envío de productos
-    socket.emit("Products", await Product.getAll());
+    socket.emit("Products", await Product.getFaker());
 
     socket.on("save", async (product) => {
       // guardo el producto
       await Product.create(product);
       // renderizo los productos
-      io.sockets.emit("Products", await Product.getAll());
+      io.sockets.emit("Products", await Product.getFaker());
     });
 
     // envío de mensajes

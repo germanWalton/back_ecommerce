@@ -23,13 +23,25 @@ socket.on("Products", (data) => {
 socket.on("Messages", (data) => {
   const chat = document.querySelector("#chat");
   let templateHandlebars;
+  const author = new normalizr.schema.Entity("authors", {}, { idAttribute: "email" });
+  const message = new normalizr.schema.Entity("messages", {
+    author:author
+  })
+  const schemaMessage = new normalizr.schema.Entity("data", {
+    messages:[message]
+  })
+  const denormalizeData = normalizr.denormalize("messages", schemaMessage, data.entities)
+  const denormalizedData = denormalizeData.messages
+  const denormalizeDataLength = JSON.stringify(data).length
+  const normalizedDataLength = JSON.stringify(denormalizeData).length
+  const compressionPercentage = Math.floor((normalizedDataLength * 100) / denormalizeDataLength)
   fetch("/static/templates/chats.hbs")
     .then((resp) => resp.text())
     .then((templateHbs) => {
       //compila la plantilla
       const template = Handlebars.compile(templateHbs);
       //html con la plantilla compilada
-      templateHandlebars = template({ data });
+      templateHandlebars = template({ denormalizedData,compressionPercentage });
     })
     .finally(() => {
       chat.innerHTML = templateHandlebars;
@@ -70,6 +82,8 @@ sendMessage.addEventListener("click", (e) => {
   const avatar = document.querySelector("#avatar").value;
   const message = document.querySelector("#message").value;
 
+  
+
   const emailValidator = (email) => {
     if (
       /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i.test(
@@ -82,12 +96,9 @@ sendMessage.addEventListener("click", (e) => {
     }
   };
 
-  const msg = {
-    email: email,
-    message: message,
-  };
 
-  const msg2 = {
+
+  const msg = {
     author: {
       email:email,
       name: name,
@@ -99,9 +110,9 @@ sendMessage.addEventListener("click", (e) => {
     text:message
   }
 
-  if (emailValidator(email)!=null && message.length >= 3) {
-    socket.emit("Msg", msg2);
-    console.log(msg2)
+  if (emailValidator(email) != null && message.length >= 3) {
+    
+    socket.emit("Msg", msg);
    document.querySelector("#email").value = "";
    document.querySelector("#message").value = "";
    document.querySelector("#authorName").value = "";
