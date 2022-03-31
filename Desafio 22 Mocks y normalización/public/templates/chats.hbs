@@ -1,0 +1,13 @@
+    {{#if data}}
+    {{#each data}}
+<div class="mx-auto text-center" style="width: 25rem;">
+    <div class="card-body">
+    <h5 class="card-title">{{this.author.email}}</h5>
+    <p class="card-text">{{this.date}}</p>
+    <p class="card-text">{{this.text}}</p>
+ </div>
+</div>
+  {{/each}}
+   {{else}}
+   <h5 class="text-center mt-5">Upss.... no se encontraron conversaciones</h5>
+   {{/if}}

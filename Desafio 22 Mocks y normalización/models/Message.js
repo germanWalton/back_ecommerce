@@ -1,0 +1,49 @@
+const { Schema, model } = require("mongoose");
+const moment = require("moment");
+const faker = require("faker");
+const { schema, normalize } = require("normalizr");
+
+class Message {
+  constructor() {
+    
+    const messagesSchema = new Schema({
+      author: {
+        email: { type:String,default:faker.internet.email() },
+        name: {type:String, default:faker.name.firstName() },
+        lastName: {type:String,default:faker.name.lastName()},
+        age: { type: Number, default:faker.datatype.number() },
+        alias: { type: String, default: faker.internet.userName() },
+        avatar: { type: String, defualt:faker.internet.avatar()}
+      },
+      text: String,
+      date: { type: String, default: moment().format("DD/MM/YYYY HH:mm:ss") },
+    });
+
+    this.model = model("messages", messagesSchema);
+  }
+
+  async saveMessage(message) {
+     await this.model.create(message)
+  }
+  
+  async readMessages() {
+    const author = new schema.Entity("authors", {}, { idAttribute: "email" });
+    const message = new schema.Entity("messages", {
+      author:author
+    })
+    const data = new schema.Entity("data", {
+      messages:[message]
+    })
+    const dbMessages = await this.model.find({});
+
+    const normalizeData = normalize({
+      id: "messages",
+      messages: dbMessages,
+    }, data) 
+
+    console.log(normalizeData);
+    return normalizeData
+  }
+}
+
+module.exports = new Message()
