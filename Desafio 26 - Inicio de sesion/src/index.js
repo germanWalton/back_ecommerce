@@ -27,9 +27,16 @@
   //routers
   const homeRouter = require("./routes/home");
 
+  //passport
+  const passport = require("passport");
+  const flash = require("express-flash");
+  const initializePassport= require("./passport/local")
+
   const PORT = process.env.PORT || 8080;
 
   const { HOSTNAME, SCHEMA, DATABASE, USER, PASSWORD, OPTIONS } = mongoConfig;
+
+  initializePassport(passport);
 
   app.set("view engine", "hbs");
   app.engine(
@@ -49,6 +56,7 @@
   //json middlewares -> req.body {}
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
+  app.use(flash());
   app.use(cookieParser("Esto es un secreto")); //req.cookies = {}
   app.use(session({
     secret: "secret",
@@ -57,11 +65,14 @@
     
     store: new MongoStore({
       mongoUrl: `${SCHEMA}://${USER}:${PASSWORD}@${HOSTNAME}/${DATABASE}?${OPTIONS}`,
-      ttl: 1 * 60,
+      ttl: 10 * 60,
       expires: 1000 * 1 * 60,
       autoRemove: "native"
     })
   }))
+
+  app.use(passport.initialize())
+  app.use(passport.session())
 
   app.use("/static/", express.static(path.join(__dirname, "../public")));
 

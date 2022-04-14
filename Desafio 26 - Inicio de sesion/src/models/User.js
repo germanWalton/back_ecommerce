@@ -34,6 +34,11 @@ class User {
     }
   }
 
+  async getById(id) {
+    return await this.model.findById(id)
+   
+  }
+
   async isPasswordValid(email,password) {
     const user = await this.model.findOne({ email });
     

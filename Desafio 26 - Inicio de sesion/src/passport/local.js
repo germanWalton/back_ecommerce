@@ -1,4 +1,4 @@
-const localStrategy = require("passport-local").Strategy;
+const LocalStrategy = require("passport-local").Strategy;
 const userModel = require("../models/User");
 
 
@@ -8,6 +8,8 @@ module.exports = (passport) => {
   try {
     //chequear que exista el email
     if (!await userModel.existsByEmail(email)) {
+      console.log("no existe")
+
       return done(null,false,{message:"user does not exist!!!"})
 
   
@@ -27,7 +29,7 @@ module.exports = (passport) => {
   }
   }
 
-  const registerUser = (req,email,password,done) => {
+  const registerUser =async (req,email,password,done) => {
     
     const{name,lastname} = req.body
     try {
@@ -38,11 +40,11 @@ module.exports = (passport) => {
        }
       //guardar usuario en la db
         const user = await userModel.create({
-        id:user._id, email,name,lastname,password
+         email,name,lastname,password
         })
        
    
-      done(null,user)
+      done(null, { ...user, id:user._id })
    }
      catch (e) {
        done(e)
@@ -50,11 +52,10 @@ module.exports = (passport) => {
    }
    
   }
-  passport.use("login", new localStrategy({ usernameField: "email", password }, authenticateUser))
-  passport.use("register", new localStrategy({ usernameField: "email", password, passReqToCallback: true }, registerUser))
-  
-  passport.serlizeUser((user,done)=>done(null,user.id))
-  passport.deserializeUser((id, done) => {
-    
+  passport.use("login", new LocalStrategy({ usernameField: "email", passwordField:"password" }, authenticateUser))
+  passport.use("register", new LocalStrategy({ usernameField: "email", passwordField:"password", passReqToCallback: true }, registerUser))
+  passport.serializeUser((user,done)=>done(null,user.id))
+  passport.deserializeUser(async(id, done) => {
+    done(null,await userModel.getById(id))
   })
 }
