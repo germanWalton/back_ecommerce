@@ -1,4 +1,5 @@
 (async () => {
+  const args = require("./args/yargs")
   const express = require("express");
   const { fork } = require("child_process");
   const path = require("path");
@@ -24,13 +25,14 @@
 
   //routers
   const homeRouter = require("./routes/home");
+  const infoRouter = require("./routes/info")
 
   //passport
   const passport = require("passport");
   const flash = require("express-flash");
   const initializePassport = require("./passport/local");
 
-  const PORT = process.env.PORT || 8080;
+  const PORT = args.port;
 
   const { HOSTNAME, SCHEMA, DATABASE, USER, PASSWORD, OPTIONS } = mongoConfig;
 
@@ -80,14 +82,13 @@
   app.use("/static/", express.static(path.join(__dirname, "../public")));
 
   app.use("/", homeRouter);
+  app.use("/info", infoRouter);
+
 
   //Fork
-
-  app.get("/api/randoms", (req, res) => {
+  
+    app.get("/api/randoms", (req, res) => {
     const { query } = req;
-    console.log(query);
-    // const aleatorios = random(+query.num || 100000000 )
-    // res.send(aleatorios)
     const random = fork(__dirname + "/random.js");
     random.send({
       message: "start",
@@ -128,7 +129,7 @@
       io.sockets.emit("Messages", await Message.readMessages());
     });
   });
-
+console.log(args)
   server.listen(PORT, () =>
     console.log(`listening on https://localhost:${PORT}`)
   );

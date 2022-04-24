@@ -1,8 +1,8 @@
 module.exports = {
-  HOSTNAME: "cluster0.pmdmt.mongodb.net",
-  SCHEMA: "mongodb+srv",
-  USER: "germanWalton",
+  HOSTNAME: process.env.HOSTNAME,
+  SCHEMA: process.env.SCHEMA,
+  USER: process.env.USER,
   PASSWORD: process.env.MONGO_PASSWORD,
-  DATABASE: "ecommerce",
-  OPTIONS: "retryWrites=true&w=majority"
+  DATABASE: process.env.DATABASE,
+  OPTIONS: process.env.OPTIONS
 }
