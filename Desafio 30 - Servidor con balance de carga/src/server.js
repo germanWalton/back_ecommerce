@@ -1,7 +1,5 @@
-(async () => {
-  const args = require("./args/yargs")
-  const cluster = require('cluster');
-  const numCPUs = require('os').cpus().length
+ (async () => {
+  // const args = require("./args/yargs");
   const express = require("express");
   const { fork } = require("child_process");
   const path = require("path");
@@ -27,14 +25,14 @@
 
   //routers
   const homeRouter = require("./routes/home");
-  const infoRouter = require("./routes/info")
+  const infoRouter = require("./routes/info");
 
   //passport
   const passport = require("passport");
   const flash = require("express-flash");
   const initializePassport = require("./passport/local");
 
-  const PORT = args.port;
+  // const PORT = args.port;
 
   const { HOSTNAME, SCHEMA, DATABASE, USER, PASSWORD, OPTIONS } = mongoConfig;
 
@@ -86,10 +84,9 @@
   app.use("/", homeRouter);
   app.use("/info", infoRouter);
 
-
   //Fork
-  
-    app.get("/api/randoms", (req, res) => {
+
+  app.get("/api/randoms", (req, res) => {
     const { query } = req;
     const random = fork(__dirname + "/random.js");
     random.send({
@@ -100,6 +97,12 @@
       console.log(message);
       res.send(message);
     });
+  });
+
+  // Stop process
+  app.get("/end", (req, res) => {
+    res.send(`Process ${process.pid} stopped`);
+    process.exit();
   });
 
   //socket
@@ -131,8 +134,11 @@
       io.sockets.emit("Messages", await Message.readMessages());
     });
   });
-console.log(args)
-  server.listen(PORT, () =>
-    console.log(`listening on https://localhost:${PORT}`)
-  );
-})();
+  // server.listen(PORT, () =>
+  //   console.log(`listening on https://localhost:${PORT}`)
+  // );
+  module.exports = {
+    app,server
+  }
+ })();
+

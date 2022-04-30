@@ -1,4 +1,5 @@
 const args = require('../args/yargs')
+const numCPUs = require("os").cpus().length;
 
 
 const info = (req, res) => {
@@ -11,6 +12,7 @@ const info = (req, res) => {
       version: process.version,
       projectPath: process.cwd(),
       rss: JSON.stringify(process.memoryUsage(), null, 2),
+      cpus:numCPUs
     };
     res.render('info',{ layout: 'login',info })
 

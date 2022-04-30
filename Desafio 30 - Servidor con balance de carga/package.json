@@ -1,11 +1,19 @@
 {
-  "name": "24-after-classs",
+  "name": "Desafio-entregable",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.js",
+  "main": "./src/app.js",
   "scripts": {
-    "start": "node -r dotenv/config .",
-    "dev": "nodemon --ignore './public/*' -r dotenv/config ."
+    "start": "node -r dotenv/config . --port 8080",
+    "start:cluster":"node -r dotenv/config . --port 8080 --mode cluster",
+    "dev": "nodemon --legacy-watch --ignore './public/*' -r dotenv/config . --port 8080",
+    "dev:cluster":"nodemon --legacy-watch --ignore './public/*' -r dotenv/config . --port 8080 --mode cluster",
+    "forever:fork": "forever start --watch . --port 8080",
+    "forever:cluster": "forever start --watch . --port 8080 --mode cluster",
+    "pm2:worker": "pm2 start worker.config.js",
+    "pm2:cluster": "pm2 start cluster.config.js"
+
+
   },
   "keywords": [],
   "author": "",
