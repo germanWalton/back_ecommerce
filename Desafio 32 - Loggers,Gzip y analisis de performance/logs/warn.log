@@ -1,0 +1,184 @@
+[2022-05-02T13:32:00.734] [INFO] app - worker with pid 10500 listening on https://localhost:8080
+[2022-05-02T13:32:15.173] [WARN] app - GET
+[2022-05-02T13:32:15.174] [WARN] app - /infou
+[2022-05-03T00:15:35.760] [WARN] warning - GET
+[2022-05-03T00:15:35.761] [WARN] warning - /infoh
+[2022-05-03T08:53:12.174] [WARN] warning - GET
+[2022-05-03T08:53:12.174] [WARN] warning - /jj
+[2022-05-03T09:01:00.775] [WARN] warning - GET
+[2022-05-03T09:01:00.776] [WARN] warning - /infore
+[2022-05-03T09:04:17.072] [WARN] warning - The method is GET
+[2022-05-03T09:04:17.073] [WARN] warning - The route /infore doesn´t exist
+[2022-05-03T09:06:12.423] [WARN] warning - Request received GET
+[2022-05-03T09:06:12.423] [WARN] warning - The route /infore doesn't exist
+[2022-05-03T09:06:46.551] [WARN] warning - Request received GET
+[2022-05-03T09:06:46.552] [WARN] warning - The route /infore doesn't exist
+[2022-05-03T09:07:01.538] [WARN] warning - Request received GET
+[2022-05-03T09:07:01.538] [WARN] warning - The route /inforekii doesn't exist
+[2022-05-03T09:11:58.376] [WARN] warning - Request received GET
+[2022-05-03T09:11:58.377] [WARN] warning - The route http://localhost:8080//hola doesn't exist
+[2022-05-03T09:12:29.874] [WARN] warning - Request received GET
+[2022-05-03T09:12:29.875] [WARN] warning - The route http://localhost:8080/product doesn't exist
+[2022-05-03T09:26:57.917] [WARN] warning - advertencia
+[2022-05-03T09:29:44.876] [WARN] warning - advertencia
+[2022-05-03T09:31:37.970] [WARN] warning - advertencia
+[2022-05-03T09:33:04.250] [WARN] warning - advertencia
+[2022-05-03T09:33:06.945] [WARN] warning - advertencia
+[2022-05-03T09:35:29.909] [WARN] warning - advertencia
+[2022-05-03T09:37:31.776] [WARN] warning - advertencia
+[2022-05-03T09:37:50.211] [WARN] warning - advertencia
+[2022-05-03T09:38:41.315] [WARN] warning - advertencia
+[2022-05-03T09:40:06.432] [WARN] warning - advertencia
+[2022-05-03T09:40:18.676] [WARN] warning - advertencia
+[2022-05-03T10:04:15.186] [WARN] warning - advertencia
+[2022-05-03T10:06:03.403] [WARN] warning - advertencia
+[2022-05-03T10:06:16.642] [WARN] warning - advertencia
+[2022-05-03T10:07:32.231] [WARN] warning - advertencia
+[2022-05-03T10:07:41.297] [WARN] warning - advertencia
+[2022-05-03T10:08:07.205] [WARN] warning - advertencia
+[2022-05-03T10:08:31.076] [WARN] warning - advertencia
+[2022-05-03T10:08:49.711] [WARN] warning - advertencia
+[2022-05-03T10:09:40.888] [WARN] warning - advertencia
+[2022-05-03T10:09:58.296] [WARN] warning - advertencia
+[2022-05-03T10:11:08.703] [WARN] warning - advertencia
+[2022-05-03T10:11:38.300] [WARN] warning - advertencia
+[2022-05-03T10:11:55.405] [WARN] warning - advertencia
+[2022-05-03T10:12:10.671] [WARN] warning - advertencia
+[2022-05-03T10:12:55.378] [WARN] warning - advertencia
+[2022-05-03T10:13:40.416] [WARN] warning - advertencia
+[2022-05-03T10:14:34.256] [WARN] warning - advertencia
+[2022-05-03T10:14:44.245] [WARN] warning - advertencia
+[2022-05-03T10:15:09.888] [WARN] warning - advertencia
+[2022-05-03T10:15:20.193] [WARN] warning - advertencia
+[2022-05-03T10:16:05.578] [WARN] warning - advertencia
+[2022-05-03T10:16:16.825] [WARN] warning - advertencia
+[2022-05-03T10:16:59.270] [WARN] warning - advertencia
+[2022-05-03T10:18:02.256] [WARN] warning - advertencia
+[2022-05-03T10:18:12.856] [WARN] warning - advertencia
+[2022-05-03T10:18:43.021] [WARN] warning - advertencia
+[2022-05-03T10:24:56.123] [WARN] warning - advertencia
+[2022-05-03T10:29:08.091] [WARN] warning - advertencia
+[2022-05-03T10:30:50.974] [WARN] warning - advertencia
+[2022-05-03T10:32:25.031] [WARN] warning - advertencia
+[2022-05-03T11:04:15.167] [WARN] warning - Request received GET
+[2022-05-03T11:04:15.169] [WARN] warning - The route http://localhost:8080/class=%22w-25 doesn't exist
+[2022-05-03T11:04:59.130] [WARN] warning - Request received GET
+[2022-05-03T11:04:59.131] [WARN] warning - The route http://localhost:8080/class=%22w-25 doesn't exist
+[2022-05-04T00:56:16.877] [WARN] warning - Request received GET
+[2022-05-04T00:56:16.879] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T00:56:20.190] [WARN] warning - Request received GET
+[2022-05-04T00:56:20.191] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T00:59:07.107] [WARN] warning - Request received GET
+[2022-05-04T00:59:07.108] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T00:59:44.551] [WARN] warning - Request received GET
+[2022-05-04T00:59:44.552] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T00:59:57.949] [WARN] warning - Request received GET
+[2022-05-04T00:59:57.950] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T01:00:01.592] [WARN] warning - Request received GET
+[2022-05-04T01:00:01.592] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T01:01:20.328] [WARN] warning - Request received GET
+[2022-05-04T01:01:20.329] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T01:01:53.596] [WARN] warning - Request received GET
+[2022-05-04T01:01:53.597] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T01:02:33.562] [WARN] warning - Request received GET
+[2022-05-04T01:02:33.563] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T08:59:13.404] [WARN] warning - Request received GET
+[2022-05-04T08:59:13.405] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T08:59:18.421] [WARN] warning - Request received GET
+[2022-05-04T08:59:18.422] [WARN] warning - The route http://localhost:8081/favicon.ico doesn't exist
+[2022-05-04T09:07:13.321] [WARN] warning - Request received GET
+[2022-05-04T09:07:13.322] [WARN] warning - The route http://localhost:8081/favicon.ico doesn't exist
+[2022-05-04T09:15:06.383] [WARN] warning - Request received GET
+[2022-05-04T09:15:06.385] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:16:01.185] [WARN] warning - Request received GET
+[2022-05-04T09:16:01.186] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:16:15.322] [WARN] warning - Request received GET
+[2022-05-04T09:16:15.324] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:18:28.398] [WARN] warning - Request received GET
+[2022-05-04T09:18:28.400] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:19:17.513] [WARN] warning - Request received GET
+[2022-05-04T09:19:17.514] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:19:17.727] [WARN] warning - Request received GET
+[2022-05-04T09:19:17.728] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:19:28.382] [WARN] warning - Request received GET
+[2022-05-04T09:19:28.383] [WARN] warning - The route http://localhost:8080/infoju doesn't exist
+[2022-05-04T09:19:28.525] [WARN] warning - Request received GET
+[2022-05-04T09:19:28.526] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:19:32.844] [WARN] warning - Request received GET
+[2022-05-04T09:19:32.845] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:21:13.430] [WARN] warning - Request received GET
+[2022-05-04T09:21:13.430] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:22:31.638] [WARN] warning - Request received GET
+[2022-05-04T09:22:31.639] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:23:34.153] [WARN] warning - Request received GET
+[2022-05-04T09:23:34.155] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:24:39.377] [WARN] warning - Request received GET
+[2022-05-04T09:24:39.379] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:24:45.930] [WARN] warning - Request received GET
+[2022-05-04T09:24:45.931] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:24:54.455] [WARN] warning - Request received GET
+[2022-05-04T09:24:54.455] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:25:33.907] [WARN] warning - Request received GET
+[2022-05-04T09:25:33.908] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:31:06.024] [WARN] warning - Request received GET
+[2022-05-04T09:31:06.026] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:31:23.611] [WARN] warning - Request received GET
+[2022-05-04T09:31:23.612] [WARN] warning - The route http://localhost:8080/infod doesn't exist
+[2022-05-04T09:31:23.764] [WARN] warning - Request received GET
+[2022-05-04T09:31:23.765] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:32:16.564] [WARN] warning - Request received GET
+[2022-05-04T09:32:16.565] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:33:06.170] [WARN] warning - Request received GET
+[2022-05-04T09:33:06.171] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:36:51.888] [WARN] warning - Request received GET
+[2022-05-04T09:36:51.889] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:37:15.754] [WARN] warning - Request received GET
+[2022-05-04T09:37:15.756] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:37:23.031] [WARN] warning - Request received GET
+[2022-05-04T09:37:23.033] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:38:10.928] [WARN] warning - Request received GET
+[2022-05-04T09:38:10.929] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:39:03.852] [WARN] warning - Request received GET
+[2022-05-04T09:39:03.854] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:39:30.585] [WARN] warning - Request received GET
+[2022-05-04T09:39:30.586] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:39:38.182] [WARN] warning - Request received GET
+[2022-05-04T09:39:38.183] [WARN] warning - The route http://localhost:8080/api/productos doesn't exist
+[2022-05-04T09:39:38.376] [WARN] warning - Request received GET
+[2022-05-04T09:39:38.377] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:39:55.729] [WARN] warning - Request received GET
+[2022-05-04T09:39:55.730] [WARN] warning - The route http://localhost:8080/api/carrito doesn't exist
+[2022-05-04T09:39:55.893] [WARN] warning - Request received GET
+[2022-05-04T09:39:55.894] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:40:21.450] [WARN] warning - Request received GET
+[2022-05-04T09:40:21.450] [WARN] warning - The route http://localhost:8080/api/carrito doesn't exist
+[2022-05-04T09:40:21.656] [WARN] warning - Request received GET
+[2022-05-04T09:40:21.656] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:40:33.733] [WARN] warning - Request received GET
+[2022-05-04T09:40:33.734] [WARN] warning - The route http://localhost:8080/api/carrito doesn't exist
+[2022-05-04T09:40:33.964] [WARN] warning - Request received GET
+[2022-05-04T09:40:33.964] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:41:14.718] [WARN] warning - Request received GET
+[2022-05-04T09:41:14.719] [WARN] warning - The route http://localhost:8080/api/carrito doesn't exist
+[2022-05-04T09:41:14.930] [WARN] warning - Request received GET
+[2022-05-04T09:41:14.931] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:41:15.724] [WARN] warning - Request received GET
+[2022-05-04T09:41:15.725] [WARN] warning - The route http://localhost:8080/api/carrito doesn't exist
+[2022-05-04T09:41:15.921] [WARN] warning - Request received GET
+[2022-05-04T09:41:15.921] [WARN] warning - The route http://localhost:8080/favicon.ico doesn't exist
+[2022-05-04T09:52:20.656] [WARN] warning - Request received GET
+[2022-05-04T09:52:20.657] [WARN] warning - The route http://localhost:8080/infojj doesn't exist
+[2022-05-04T09:52:44.644] [WARN] warning - Request received GET
+[2022-05-04T09:52:44.645] [WARN] warning - The route http://localhost:8080/api/productos doesn't exist
+[2022-05-04T10:03:01.956] [WARN] warning - Request received GET
+[2022-05-04T10:03:01.957] [WARN] warning - The route http://localhost:8080/api/randomss doesn't exist
+[2022-05-04T10:13:13.861] [WARN] warning - Request received GET
+[2022-05-04T10:13:13.861] [WARN] warning - The route http://localhost:8080/class=%22w-25 doesn't exist
+[2022-05-04T11:38:32.794] [WARN] warning - Request received GET
+[2022-05-04T11:38:32.795] [WARN] warning - The route http://localhost:8080/class=%22w-25 doesn't exist
+[2022-05-04T11:38:48.096] [WARN] warning - Request received GET
+[2022-05-04T11:38:48.096] [WARN] warning - The route http://localhost:8080/api/productos doesn't exist
+[2022-05-04T11:43:53.307] [WARN] warning - Request received GET
+[2022-05-04T11:43:53.309] [WARN] warning - The route http://localhost:8080/api/carrito/623cedf6cba3ae2170ac7c7b/productos doesn't exist
+[2022-05-04T11:43:57.044] [WARN] warning - Request received GET
+[2022-05-04T11:43:57.045] [WARN] warning - The route http://localhost:8080/api/carrito/623cedf6cba3ae2170ac7c7b/productos doesn't exist

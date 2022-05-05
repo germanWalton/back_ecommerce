@@ -1,0 +1,22 @@
+  {{#if compressionPercentage }}
+     <h4 class="card-text text-center mt-4 mb-5">Nivel de compresión de mensajes: {{compressionPercentage}}%</h4>
+     {{else}}
+   <h5 class="text-center mt-5 p-3">Upss.... no se encontró porcentaje</h5>
+    {{/if}}
+    
+    {{#if denormalizedData }}
+    {{#each denormalizedData}}
+
+<div class="mx-auto text-center" style="width: 25rem;">
+    <div class="card-body">
+    <h5 class="card-title">{{this.date}}</h5>
+    <p class="card-text">{{this.author.email}}</p>
+    <p class="card-text">{{this.text}}</p>
+     </div>
+
+  {{/each}}
+   {{else}}
+   <h5 class="text-center mt-5">Upss.... no se encontraron conversaciones</h5>
+   {{/if}}
+   
+</div>
