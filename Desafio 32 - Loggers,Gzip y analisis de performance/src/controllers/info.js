@@ -1,6 +1,6 @@
 const args = require('../args/yargs')
 const numCPUs = require("os").cpus().length;
-
+const logger = require("../log/index")
 
 const info = (req, res) => {
   try {
@@ -14,6 +14,9 @@ const info = (req, res) => {
       rss: JSON.stringify(process.memoryUsage(), null, 2),
       cpus:numCPUs
     };
+    if (req.query.console) {
+      logger.log(JSON.stringify(info,null,2))
+    }
     res.render('info',{ layout: 'login',info })
 
   } catch(e){console.log(e)}

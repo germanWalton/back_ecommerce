@@ -1,0 +1,220 @@
+Statistical profiling result from result_prof_with_console.log, (6127 ticks, 1 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   5081   82.9%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    980   16.0%          C:\Program Files\nodejs\node.exe
+      1    0.0%          C:\WINDOWS\System32\KERNELBASE.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      8    0.1%   12.3%  LazyCompile: *resolve node:path:158:10
+      4    0.1%    6.2%  LazyCompile: *parse C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:269:30
+      3    0.0%    4.6%  LazyCompile: *wrap C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:101:22
+      2    0.0%    3.1%  LazyCompile: *normalizeString node:path:66:25
+      2    0.0%    3.1%  LazyCompile: *next C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:478:32
+      2    0.0%    3.1%  LazyCompile: *emit node:events:340:44
+      2    0.0%    3.1%  LazyCompile: *deserializeObject C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\bson\lib\parser\deserializer.js:65:27
+      2    0.0%    3.1%  LazyCompile: *Readable.read node:internal/streams/readable:394:35
+      2    0.0%    3.1%  LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    0.0%    1.5%  LazyCompile: *yy.locInfo C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\base.js:42:25
+      1    0.0%    1.5%  LazyCompile: *step C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\express-handlebars\dist\express-handlebars.js:31:18
+      1    0.0%    1.5%  LazyCompile: *sent C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\express-handlebars\dist\express-handlebars.js:28:39
+      1    0.0%    1.5%  LazyCompile: *remove node:internal/linkedlist:15:16
+      1    0.0%    1.5%  LazyCompile: *readPackageScope node:internal/modules/cjs/loader:321:26
+      1    0.0%    1.5%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    1.5%  LazyCompile: *processIncomingData C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\cmap\message_stream.js:79:29
+      1    0.0%    1.5%  LazyCompile: *passLookupPropertyOption C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\runtime.js:366:34
+      1    0.0%    1.5%  LazyCompile: *ondata node:internal/streams/readable:752:18
+      1    0.0%    1.5%  LazyCompile: *normalize node:path:304:12
+      1    0.0%    1.5%  LazyCompile: *next C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\express\lib\router\index.js:176:16
+      1    0.0%    1.5%  LazyCompile: *isFileType node:fs:205:20
+      1    0.0%    1.5%  LazyCompile: *anonymous C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:12:42
+      1    0.0%    1.5%  LazyCompile: *__awaiter C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\express-handlebars\dist\express-handlebars.js:18:54
+      1    0.0%    1.5%  LazyCompile: *SourceNode_prepend C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\source-map\lib\source-node.js:197:59
+      1    0.0%    1.5%  LazyCompile: *SourceNode_add C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\source-map\lib\source-node.js:172:51
+      1    0.0%    1.5%  LazyCompile: *Long.isNegative C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\bson\lib\long.js:492:42
+      1    0.0%    1.5%  LazyCompile: *Long C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\bson\lib\long.js:58:18
+      1    0.0%    1.5%  LazyCompile: *<anonymous> C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\express-handlebars\dist\express-handlebars.js:368:47
+      1    0.0%    1.5%  LazyCompile: *<anonymous> C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\express-handlebars\dist\express-handlebars.js:167:47
+      1    0.0%    1.5%  Function: ^toBin C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\cmap\commands.js:496:10
+      1    0.0%    1.5%  Function: ^startSession C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\sdam\topology.js:336:17
+      1    0.0%    1.5%  Function: ^session C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\express-session\index.js:179:26
+      1    0.0%    1.5%  Function: ^resOnFinish node:_http_server:788:21
+      1    0.0%    1.5%  Function: ^readFileSync node:fs:450:22
+      1    0.0%    1.5%  Function: ^readFileAfterStat node:fs:326:27
+      1    0.0%    1.5%  Function: ^read node:internal/fs/read_file_context:85:7
+      1    0.0%    1.5%  Function: ^get serviceId C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\cmap\connection.js:82:18
+      1    0.0%    1.5%  Function: ^closeSync node:fs:526:19
+      1    0.0%    1.5%  Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1    0.0%    1.5%  Function: ^Minimatch C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\minimatch\minimatch.js:128:20
+      1    0.0%    1.5%  Function: ^Long.eq C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\bson\lib\long.js:435:34
+      1    0.0%    1.5%  Function: ^FastBuffer node:internal/buffer:958:14
+      1    0.0%    1.5%  Function: ^CommandOperation C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\operations\command.js:14:16
+      1    0.0%    1.5%  Function: ^<anonymous> node:internal/util:347:32
+      1    0.0%    1.5%  Function: ^<anonymous> C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\utils.js:496:13
+      1    0.0%    1.5%  Function: ^<anonymous> C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\cursor\find_cursor.js:54:81
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     64    1.0%   98.5%  JavaScript
+      0    0.0%    0.0%  C++
+     58    0.9%   89.2%  GC
+   6062   98.9%          Shared libraries
+      1    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   5081   82.9%  C:\WINDOWS\SYSTEM32\ntdll.dll
+
+    980   16.0%  C:\Program Files\nodejs\node.exe
+    660   67.3%    C:\Program Files\nodejs\node.exe
+    213   32.3%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+    167   78.4%        Function: ^writeGeneric node:internal/stream_base_commons:151:22
+    156   93.4%          Function: ^Socket._writeGeneric node:net:769:42
+    156  100.0%            Function: ^Socket._write node:net:806:35
+     11    6.6%          LazyCompile: *ondata node:internal/streams/readable:752:18
+     11  100.0%            LazyCompile: *readableAddChunk node:internal/streams/readable:236:26
+     46   21.6%        LazyCompile: *writeOrBuffer node:internal/streams/writable:365:23
+     22   47.8%          LazyCompile: *_write node:internal/streams/writable:283:16
+     22  100.0%            Function: ^Writable.write node:internal/streams/writable:333:36
+     13   28.3%          LazyCompile: *Writable.write node:internal/streams/writable:333:36
+     11   84.6%            Function: ^value node:internal/console/constructor:257:20
+      2   15.4%            Function: ^ondata node:internal/streams/readable:752:18
+     11   23.9%          Function: ^_write node:internal/streams/writable:283:16
+     11  100.0%            Function: ^Writable.write node:internal/streams/writable:333:36
+     69   10.5%      Function: ^compileFunction node:vm:308:25
+     69  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     69  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+     69  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     26    3.9%      Function: ^openSync node:fs:576:18
+     26  100.0%        Function: ^readFileSync node:fs:450:22
+     26  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     14   53.8%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+     12   46.2%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     24    3.6%      Function: ^writevGeneric node:internal/stream_base_commons:126:23
+     24  100.0%        Function: ^Socket._writeGeneric node:net:769:42
+     24  100.0%          Function: ^Socket._writev node:net:801:36
+     24  100.0%            Function: ^doWrite node:internal/streams/writable:398:17
+     23    3.5%      Function: ^stat node:internal/modules/cjs/loader:151:14
+     18   78.3%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+     18  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+     18  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      5   21.7%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      5  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      5  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+     21    3.2%      Function: ^realpathSync node:fs:2408:22
+     18   85.7%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+     17   94.4%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+     17  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1    5.6%          LazyCompile: ~tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            LazyCompile: ~finalizeEsmResolution node:internal/modules/cjs/loader:939:31
+      2    9.5%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      2  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    4.8%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          LazyCompile: ~tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            LazyCompile: ~finalizeEsmResolution node:internal/modules/cjs/loader:939:31
+     15    2.3%      C:\Program Files\nodejs\node.exe
+      2   13.3%        Function: ^parse C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\minimatch\minimatch.js:296:16
+      2  100.0%          C:\Program Files\nodejs\node.exe
+      2  100.0%            Function: ^<anonymous> C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\minimatch\minimatch.js:196:26
+      1    6.7%        LazyCompile: ~MongoStore C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\connect-mongo\build\main\lib\MongoStore.js:75:16
+      1  100.0%          Function: ~<anonymous> C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\src\server.js:1:2
+      1  100.0%            Function: ~<anonymous> C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\src\server.js:1:1
+      1    6.7%        LazyCompile: *quotedString C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:118:38
+      1  100.0%          Function: ^pushSource C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:881:34
+      1  100.0%            Function: ^append C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:394:26
+      1    6.7%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1    6.7%        Function: ^splitRoot node:fs:2358:33
+      1  100.0%          Function: ^realpathSync node:fs:2408:22
+      1  100.0%            Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1    6.7%        Function: ^realpathSync node:fs:2408:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1    6.7%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    6.7%        Function: ^readFile node:fs:373:18
+      1  100.0%          Function: ^go$readFile C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\graceful-fs\graceful-fs.js:117:26
+      1  100.0%            Function: ^readFile C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\graceful-fs\graceful-fs.js:111:21
+      1    6.7%        Function: ^parseObject C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\qs\lib\parse.js:114:28
+      1  100.0%          Function: ^parseQueryStringKeys C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\qs\lib\parse.js:149:46
+      1  100.0%            Function: ^module.exports C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\qs\lib\parse.js:237:27
+      1    6.7%        Function: ^messageHandler C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\cmap\connection.js:416:35
+      1  100.0%          LazyCompile: *processIncomingData C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\cmap\message_stream.js:79:29
+      1  100.0%            Function: ^_write C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\cmap\message_stream.js:26:11
+      1    6.7%        Function: ^Module node:internal/modules/cjs/loader:172:16
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    6.7%        Function: ^Minimatch C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\minimatch\minimatch.js:128:20
+      1  100.0%          Function: ^setopts C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\glob\common.js:48:18
+      1  100.0%            Function: ^Glob C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\glob\glob.js:117:15
+      1    6.7%        Function: ^Glob._process C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\glob\glob.js:295:36
+      1  100.0%          Function: ^Glob._processGlobStar2 C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\glob\glob.js:628:45
+      1  100.0%            Function: ^<anonymous> C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\glob\glob.js:622:43
+      1    6.7%        C:\Program Files\nodejs\node.exe
+      1  100.0%          Function: ^isValid C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\read_preference.js:133:19
+      1  100.0%            Function: ^isValid C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\mongodb\lib\read_preference.js:149:12
+     11    1.7%      Function: ^getColorDepth node:internal/tty:106:23
+     11  100.0%        Function: ^value node:internal/console/constructor:299:20
+     11  100.0%          Function: ^value node:internal/console/constructor:320:20
+     11  100.0%            Function: ^log node:internal/console/constructor:358:6
+      9    1.4%      Function: ^statSync node:fs:1528:18
+      9  100.0%        Function: ^tryStat C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\express\lib\view.js:174:17
+      9  100.0%          Function: ^resolve C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\express\lib\view.js:146:42
+      9  100.0%            Function: ^lookup C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\express\lib\view.js:104:40
+      7    1.1%      LazyCompile: *wrap C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:101:22
+      2   28.6%        LazyCompile: *resolvePath C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:492:36
+      2  100.0%          Function: ^lookupOnContext C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:448:44
+      2  100.0%            LazyCompile: *compile C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      2   28.6%        LazyCompile: *replaceStack C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:892:38
+      1   50.0%          LazyCompile: *append C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:394:26
+      1  100.0%            LazyCompile: *compile C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      1   50.0%          Function: ^append C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:394:26
+      1  100.0%            Function: ^compile C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      1   14.3%        LazyCompile: *push C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:868:22
+      1  100.0%          Function: ^replaceStack C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:892:38
+      1  100.0%            Function: ^resolvePath C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:492:36
+      1   14.3%        LazyCompile: *castChunk C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:52:19
+      1  100.0%          LazyCompile: *wrap C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:101:22
+      1  100.0%            LazyCompile: *push C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:868:22
+      1   14.3%        Function: ^push C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:868:22
+      1  100.0%          Function: ^replaceStack C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:892:38
+      1  100.0%            Function: ^resolvePath C:\Users\walto\OneDrive\Escritorio\Desafio 32 - Loggers,Gzip y analisis de performance\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:492:36
+      7    1.1%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      6   85.7%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2   33.3%          Function: ~<anonymous> node:crypto:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   16.7%          LazyCompile: ~get BlockList node:net:1779:16
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1   16.7%          Function: ~<anonymous> node:tls:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   16.7%          Function: ~<anonymous> node:child_process:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   16.7%          Function: ~<anonymous> node:_http_server:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   14.3%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+     10    1.0%    LazyCompile: *compileFunction node:vm:308:25
+     10  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      9   90.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+      9  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      9  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1   10.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+

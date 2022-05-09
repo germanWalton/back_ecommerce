@@ -12,13 +12,20 @@
     "forever:cluster": "forever start --watch . --port 8080 --mode cluster",
     "pm2:worker": "pm2 start worker.config.js",
     "pm2:cluster": "pm2 start cluster.config.js",
-    "test:artillery": "artillery quick --count=50 -n 20 http://localhost:8080/info > result_artillery.txt"
+    "test:artillery": "artillery quick --count=50 -n 20 http://localhost:8080/info > result_artillery_without_console.txt",
+    "test:artillery-console": "artillery quick --count=50 -n 20 http://localhost:8080/info?console=1 > result_artillery_with_console.txt",
+    "profilling": "node --prof -r dotenv/config . --port 8080",
+    "test:autocannon":"node ./tests/file.spec.js",
+    "test:0x":"0x .",
+    "test:inspect":"node --inspect -r dotenv/config . --port 8080"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "0x": "^5.2.1",
     "artillery": "^2.0.0-15",
+    "autocannon": "^7.9.0",
     "bcrypt": "^5.0.1",
     "compression": "^1.7.4",
     "connect-mongo": "^4.6.0",
