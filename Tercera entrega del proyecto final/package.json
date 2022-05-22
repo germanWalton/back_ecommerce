@@ -4,7 +4,8 @@
   "description": "",
   "main": "./src/app.js",
   "scripts": {
-    "start": "node -r dotenv/config . --port 8080",
+    "start":"node .",
+    "start:local": "node -r dotenv/config . --port 8080",
     "start:cluster": "node -r dotenv/config . --port 8080 --mode cluster",
     "dev": "nodemon --legacy-watch --ignore './public/*' -r dotenv/config . --port 8080",
     "dev:cluster": "nodemon --legacy-watch --ignore './public/*' -r dotenv/config . --port 8080 --mode cluster",

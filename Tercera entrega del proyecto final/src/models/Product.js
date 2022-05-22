@@ -75,7 +75,9 @@ class Product {
    }
 
   async getById(id) {
-    const product = await this.model.findOne({ _id: id });
+    console.log(id)
+    const product = await this.model.findOne({ _id: id })
+    console.log(product)
     return product;
   }
 

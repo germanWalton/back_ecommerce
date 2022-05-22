@@ -6,3 +6,327 @@
     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
     at node:internal/main/run_main_module:17:47
+[2022-05-20T12:21:23.795] [ERROR] error - TypeError: Cannot read properties of null (reading 'products')
+    at Cart.getCartProductsById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:45:25)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async getCartProducts (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:43:18)
+[2022-05-20T13:08:52.892] [ERROR] error - TypeError: Cannot read properties of null (reading '0')
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:63:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-20T13:09:48.656] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:64:34)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-20T13:10:46.421] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:64:34)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-20T13:12:10.346] [ERROR] error - TypeError: Cannot read properties of null (reading '0')
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:63:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-20T13:12:27.770] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:63:34)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-20T13:17:25.066] [ERROR] error - ReferenceError: Types is not defined
+    at Product.getById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Product.js:78:47)
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:62:35)
+    at deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:21)
+    at Layer.handle [as handle_request] (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\index.js:376:14)
+[2022-05-20T13:28:25.291] [ERROR] error - TypeError: Cannot read properties of null (reading '0')
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:64:16)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-20T13:28:40.529] [ERROR] error - TypeError: Cannot read properties of null (reading '1')
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:64:16)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-21T19:08:04.490] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:65:38)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-21T19:22:07.848] [ERROR] error - BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+    at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+    at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+    at ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:26:20)
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:63:50)
+    at deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:21)
+    at Layer.handle [as handle_request] (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\express\lib\router\index.js:284:15
+[2022-05-21T19:28:26.152] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:66:48)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-21T19:29:08.271] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:66:48)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-21T19:29:19.587] [ERROR] error - CastError: Cast to ObjectId failed for value "623cedf6cba3ae2170ac7c7bdf" (type string) at path "_id" for model "carts"
+    at model.Query.exec (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4719:21)
+    at model.Query.Query.then (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4818:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"623cedf6cba3ae2170ac7c7bdf"',
+  kind: 'ObjectId',
+  value: '623cedf6cba3ae2170ac7c7bdf',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+      at castObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast.js:344:32)
+      at model.Query.Query.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-05-21T19:29:27.958] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:66:48)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-21T19:32:40.913] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:66:38)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-21T19:33:10.552] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:66:38)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-21T19:34:28.670] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:66:38)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-21T19:34:36.701] [ERROR] error - Error: Product not found
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:66:38)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-21T19:39:20.594] [ERROR] error - CastError: Cast to ObjectId failed for value "623cedf6cba3ae2170ac7c7bj" (type string) at path "_id" for model "carts"
+    at model.Query.exec (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4719:21)
+    at model.Query.Query.then (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4818:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"623cedf6cba3ae2170ac7c7bj"',
+  kind: 'ObjectId',
+  value: '623cedf6cba3ae2170ac7c7bj',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+      at castObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast.js:344:32)
+      at model.Query.Query.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-05-21T19:49:22.471] [ERROR] error - TypeError: cartProducts.findOne is not a function
+    at Cart.deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:65:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deleteCartProductById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:67:5)
+[2022-05-21T21:56:08.872] [ERROR] error - CastError: Cast to ObjectId failed for value "623cedf6cba3ae2170ac7c7bñ" (type string) at path "_id" for model "carts"
+    at model.Query.exec (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4719:21)
+    at model.Query.Query.then (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4818:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"623cedf6cba3ae2170ac7c7bñ"',
+  kind: 'ObjectId',
+  value: '623cedf6cba3ae2170ac7c7bñ',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+      at castObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast.js:344:32)
+      at model.Query.Query.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-05-21T22:02:43.115] [ERROR] error - CastError: Cast to ObjectId failed for value "623dded1ca61190548252f4ahg" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4719:21)
+    at model.Query.Query.then (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4818:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"623dded1ca61190548252f4ahg"',
+  kind: 'ObjectId',
+  value: '623dded1ca61190548252f4ahg',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+      at castObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast.js:344:32)
+      at model.Query.Query.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-05-21T22:03:01.701] [ERROR] error - CastError: Cast to ObjectId failed for value "623cedf6cba3ae2170ac7c7bj" (type string) at path "_id" for model "carts"
+    at model.Query.exec (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4719:21)
+    at model.Query.Query.then (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4818:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"623cedf6cba3ae2170ac7c7bj"',
+  kind: 'ObjectId',
+  value: '623cedf6cba3ae2170ac7c7bj',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+      at castObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast.js:344:32)
+      at model.Query.Query.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-05-21T22:10:18.178] [ERROR] error - CastError: Cast to ObjectId failed for value "d345df355sg424" (type string) at path "_id" for model "carts"
+    at model.Query.exec (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4719:21)
+    at model.Query.Query.then (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4818:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"d345df355sg424"',
+  kind: 'ObjectId',
+  value: 'd345df355sg424',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+      at castObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast.js:344:32)
+      at model.Query.Query.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-05-22T16:53:02.337] [ERROR] error - TypeError: Cannot read properties of null (reading 'products')
+    at Cart.getCartProductsById (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:50:25)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async getCartProducts (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:43:18)
+[2022-05-22T18:07:34.482] [ERROR] error - ReferenceError: userId is not defined
+    at Cart.create (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\models\Cart.js:36:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async createCart (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\src\controllers\cart.js:9:18)
+[2022-05-22T19:29:42.230] [ERROR] error - CastError: Cast to ObjectId failed for value "$" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4719:21)
+    at model.Query.Query.then (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4818:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"$"',
+  kind: 'ObjectId',
+  value: '$',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+      at castObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast.js:344:32)
+      at model.Query.Query.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-05-22T19:29:45.339] [ERROR] error - CastError: Cast to ObjectId failed for value "$" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4719:21)
+    at model.Query.Query.then (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4818:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"$"',
+  kind: 'ObjectId',
+  value: '$',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+      at castObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast.js:344:32)
+      at model.Query.Query.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-05-22T19:29:47.021] [ERROR] error - CastError: Cast to ObjectId failed for value "$" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4719:21)
+    at model.Query.Query.then (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4818:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"$"',
+  kind: 'ObjectId',
+  value: '$',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+      at castObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast.js:344:32)
+      at model.Query.Query.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-05-22T19:29:48.325] [ERROR] error - CastError: Cast to ObjectId failed for value "$" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4719:21)
+    at model.Query.Query.then (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:4818:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"$"',
+  kind: 'ObjectId',
+  value: '$',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\bson\lib\objectid.js:66:23)
+      at castObjectId (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\cast.js:344:32)
+      at model.Query.Query.cast (C:\Users\walto\OneDrive\Escritorio\Tercera entrega del proyecto final\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}

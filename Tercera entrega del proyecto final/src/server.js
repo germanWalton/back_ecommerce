@@ -37,7 +37,7 @@
   //log4js
   const logger = require("./log/index");
 
-  const PORT = args.port;
+   const PORT = args.port;
 
   const { HOSTNAME, SCHEMA, DATABASE, USER, PASSWORD, OPTIONS } = config.mongoConfig;
 
@@ -105,10 +105,9 @@
     res.send("not found");
   });
 
- 
 
-  module.exports = {
-    app,
-    server
-  };
+   module.exports = {
+     app,
+     server
+   };
 })();

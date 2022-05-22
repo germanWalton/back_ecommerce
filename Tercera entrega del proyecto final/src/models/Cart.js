@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { Types } = require("mongoose")
 const moment = require("moment");
 const Product = require('../models/Product');
 
@@ -11,7 +12,7 @@ class Cart {
         type: String,
         default: moment().format("DD/MM/YYYY HH:mm:ss")
       },
-      userId:String
+      userId:String,
     })
 
     this.model = mongoose.model("carts", schema);
@@ -28,14 +29,18 @@ class Cart {
     }))
   }
 
-  async create(product={}) {
+  async create(product) {
     const cart = await this.model.create(product);
-    return cart;
+    return {
+      id: cart.id,
+      userId: cart.userId,
+      products:cart.products
+    }
   }
 
   async addToCart(cartId, productId) {
     const product = await Product.getById(productId);
-    const cart = await this.model.updateOne({ _id: cartId }, { $push: {products: product[0] } })
+    const cart = await this.model.updateOne({ _id: cartId }, { $push: {products: product } })
     return cart;
   }
 
@@ -46,17 +51,24 @@ class Cart {
   }
 
 
+  async getCartById(id) {
+    const cart = await this.model.findById(id);
+    console.log(cart)
+    return cart
+  }
+ 
+
   async deleteById(id) {
    await this.model.findByIdAndDelete(id) 
    }
   
   
   async deleteCartProductById(cartId, cod_prod) {
-    const product = await Product.getByCode(cod_prod)
-    if(product[0]==undefined){throw new Error('Product not found')}
-    await this.model.updateMany({ _id: cartId }, { $pull: { products: { code: cod_prod } } }) 
+    
+   await this.model.updateMany({ _id: cartId }, { $pull: { products: { code:cod_prod } } }) 
     
   }
+
   
 
   async getByUser(id) { 

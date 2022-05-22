@@ -16,7 +16,6 @@ const root = async (req, res) => {
 const loginForm = (req, res) => {
   res.render("login", { layout: "login" });
 };
-
 const registerForm = (req, res) => {
   res.render("register", { layout: "login" });
 };
