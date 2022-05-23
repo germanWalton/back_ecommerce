@@ -1,0 +1,35 @@
+Servidor en modo Fork
+node -r dotenv/config ./src/app.js --port 8080
+
+Servidor en modo Cluster
+node -r dotenv/config ./src/app.js --port 8080 --mode cluster
+
+Nodemon en modo Fork
+npx nodemon --legacy-watch --ignore './public/*' -r dotenv/config ./src/app.js --port 8080
+
+Nodemon en modo Cluster
+npx nodemon --legacy-watch --ignore './public/*' -r dotenv/config ./src/app.js --port 8080 --mode cluster
+
+Forever en modo Fork
+npx forever start --watch ./src/app.js --port 8080
+
+Forever en modo Cluster
+npx forever start --watch ./src/app.js --port 8080 --mode cluster
+
+PM2 en modo Fork
+npx pm2 start worker.config.js
+
+PM2 en modo Cluster
+npx pm2 start cluster.config.js
+
+
+Nginx Api Randoms #1
+npx pm2 start ./src/app.js -- --port=8081 --mode=cluster
+npx pm2 start ./src/app.js -- --port=8080
+
+Para chequear ingresar a http://localhost/api/randoms-1
+
+Nginx Api Randoms #2
+npx pm2 start worker.config.js
+
+Para chequear ingresar a http://localhost/api/randoms-2
