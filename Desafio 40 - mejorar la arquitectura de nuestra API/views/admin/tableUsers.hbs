@@ -1,0 +1,42 @@
+<h3 class="text-center mb-5">Lista de usuarios</h3>
+ <a class="btn btn-outline-secondary align-self-end w-100 mb-5" href="/admin/add/user">Agregar usuario</a>
+
+<table class="table">
+  
+  <thead>
+    <tr>
+      <th scope="col" class="p-4"></th>
+      <th scope="col" class="p-4">ID</th>
+      <th scope="col" class="p-4">NOMBRE</th>
+      <th scope="col" class="p-4">TELEFONO</th>
+      <th scope="col" class="p-4">EMAIL</th>
+      <th scope="col" class="p-4">EDAD</th>
+      <th scope="col" class="p-4">ELIMINAR</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+     {{#if users}}
+     
+    {{#each users}}
+    <tr id="{{this._id}}">
+      <th scope="row">
+      <td class="p-4">{{this._id}}</td>
+      <td class="p-4">{{this.name}} {{this.lastname}}</td>
+      <td class="p-4">{{this.phone}}</td>
+      <td class="p-4">{{this.email}}</td>
+      <td class="p-4">{{this.age}}</td>
+      <td class="p-4"><button onclick="removeUser(`{{this._id}}`)" class="btn btn-danger mt-3">Borrar</button>
+</td>
+
+</th>
+    </tr>
+    {{/each}}
+
+   {{else}}
+   <h5 class="text-center mt-5">Upss.... no se encontraron usuarios</h5>
+  </tbody>
+</table>
+   {{/if}}
+
