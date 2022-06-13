@@ -1,0 +1,35 @@
+<div class="container p-5">
+      <h5 class="p-3 text-center">Ingreso de productos</h5>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Titulo</label>
+          <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="name"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Precio</label>
+          <input name="price" type="text" class="form-control" id="price" />
+        </div>
+        <div class="mb-3">
+          <label for="thumbnail" class="form-label">Url Imagen</label>
+          <input
+            name="thumbnail"
+            type="text"
+            class="form-control"
+            id="thumbnail"
+          />
+        </div>
+        <button type="submit" class="btn btn-dark" id="sendProduct">
+          Cargar producto
+        </button>
+      </form>
+    </div>
+
+    <div class="container mt-5 mb-5">
+      <ul class="d-flex" id="productsList"></ul>
+    </div>
