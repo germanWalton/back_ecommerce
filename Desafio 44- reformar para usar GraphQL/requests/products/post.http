@@ -1,0 +1,11 @@
+PUT http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Brioche",
+  "description": "Pan brioche con manteca noissete",
+  "price": 600,
+  "thumbnail": "",
+  "code":"BRI955",
+  "stock":10
+}

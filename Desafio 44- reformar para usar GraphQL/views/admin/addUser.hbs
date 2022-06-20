@@ -1,0 +1,39 @@
+<h1>Agregar usuario</h1>
+<form action="/admin/add/user" class="w-50 mb-3" method="POST">
+{{> form-errors}}
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Ingrese su email" aria-describedby="emailHelp">
+  </div>
+    <div class="mb-3">
+    <label for="name" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="Ingrese su nombre" aria-describedby="emailHelp">
+  </div>
+    <div class="mb-3">
+    <label for="lastname" class="form-label">Apellido</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="lastname" placeholder="Ingrese su apellido" aria-describedby="emailHelp">
+  </div>
+    <div class="mb-3">
+    <label for="direction" class="form-label">Dirección</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="direction" placeholder="Ingrese su dirección" aria-describedby="emailHelp">
+  </div>
+    <div class="mb-3">
+    <label for="age" class="form-label">Edad</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="age" placeholder="Ingrese su edad" aria-describedby="emailHelp">
+  </div>
+    <div class="mb-3">
+    <label for="phone" class="form-label">Teléfono</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="phone" placeholder="Ingrese su telefono" aria-describedby="emailHelp">
+  </div>
+    <div class="mb-3">
+    <label for="avatar" class="form-label">Avatar</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="avatar" placeholder="Ingrese la url de su avatar" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña" id="exampleInputPassword1">
+  </div>
+
+  <button type="submit" class="w-100 mt-3 btn btn-primary">Registrar</button>
+  
+</form>
